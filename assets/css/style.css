@@ -1,0 +1,23 @@
+#cv-form {
+  background-color: rgb(197, 241, 185);
+}
+
+* {
+  font-family: serif;
+}
+
+#cv-template {
+  display: none;
+  background-color: rgb(207, 221, 226);
+}
+
+.myimg {
+  height: 200px;
+  width: auto;
+  margin-top: 50px;
+  margin-right: 60px;
+}
+
+.bcground {
+  background-color: rgb(129, 129, 129);
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title> CV generator </title>
+</head>
+<body>
+
+    <div class="container" id="cv-form">
+        <h2 Class="text-center my-3">CV Generator</h2>
+        <p class="text-center">by M. Alif Ur Rahman</p>
+
+        <div class="row">
+            <div class="container-fluid">
+                
+                <h3> <u>Personal Information</u></h3>
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter Your Name"class="form-control">
+                </div>
+                
+                <div class="form-group mt-3">
+                    <label for="fatherField">Fathers Name</label>
+                    <input type="text" id="fatherField" placeholder="Enter Here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="motherField">Mothers Name</label>
+                    <input type="text" id="motherField" placeholder="Enter Here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="contactField">Your contact Number</label>
+                    <input type="text" id="contactField" placeholder="Enter phone number here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                     <label for="contactField">Your Current Address</label>
+                    <textarea type="text" id="addressField" placeholder="Enter here"class="form-control" rows="3">
+                    </textarea>
+                </div>    
+                 
+                <div class="form-group mt-3">
+                    <label for="pAddressField">Parmanent Address</label>
+                    <input type="text" id="pAddressField" placeholder="Enter Here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="religionField">Religion</label>
+                    <input type="text" id="religionField" placeholder="Enter Here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="rltnField">Relationship Status</label>
+                    <input type="text" id="rltnField" placeholder="Enter Here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="nationField">Nationality</label>
+                    <input type="text" id="nationField" placeholder="Enter Here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                     <label for="">Select your photo</label>
+                     <input id="imgField" type="file" class="form-control">
+                </div>
+
+
+                 <!---Email and other links-->
+
+                <p class="text-secondary my-3">Important Links</p>
+              
+                <div class="form-group mt-3">
+                     <label for="fbField"> Email Address </label>
+                    <input type="text" id="fbField" placeholder="Enter Here"class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                      <label for="instaField">GitHub link</label>
+                      <input type="text" id="instaField" placeholder="Enter here"class="form-control">
+                </div>
+                <br> <br>
+                <h3> <u>Professional information </u></h3>
+                
+                <div class="form-group mt-3">
+                    <label for="">Your Objective</label>
+                    <textarea id="objectiveField" placeholder="Enter Here"class="form-control" rows="5">
+                    </textarea>
+                </div>    
+
+                <!--Academic Qualifications--> 
+                <div class="form-group mt-3" id="aq">
+                    <label for="">Academic Qualifications</label>
+                    <textarea placeholder="Enter Here"class="form-control aqField" rows="3">
+                    </textarea>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-dark btn-small ">Add</button>
+                    </div>
+                </div>    
+
+                <!-- Achievements as Work Experience --> 
+                <div class="form-group mt-3" id="we">
+                    <label for="">Achievements</label>
+                    <textarea placeholder="Enter Here"class="form-control weField" rows="3">
+                    </textarea>
+                    <!--New TextArea-->
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-dark btn-small ">Add</button>
+                    </div>
+                </div>  
+                
+                <!-- Basic Computer skills  --> 
+                <div class="form-group mt-3" id="bcs">
+                    <label for="">Basic Computer skills</label>
+                    <textarea placeholder="Enter Here"class="form-control bcsField" rows="3">
+                    </textarea>
+                    <!--New TextArea-->
+                    <div class="container text-center mt-2" id="bcsAddButton">
+                        <button onclick="addNewBCSField()" class="btn btn-dark btn-small ">Add</button>
+                    </div>
+                </div>    
+              
+                <!-- Professional Developments  --> 
+                <div class="form-group mt-3" id="pd">
+                    <label for="">Professional Developments </label>
+                    <textarea placeholder="Enter Here"class="form-control pdField" rows="3">
+                    </textarea>
+                    <!--New TextArea-->
+                    <div class="container text-center mt-2" id="pdAddButton">
+                        <button onclick="addNewPDField()" class="btn btn-dark btn-small ">Add</button>
+                    </div>
+                </div>    
+             
+                 <!-- Technical Skills  --> 
+                 <div class="form-group mt-3" id="ts">
+                    <label for="">Technical Skills </label>
+                    <textarea placeholder="Enter Here"class="form-control tsField" rows="3">
+                    </textarea>
+                    <!--New TextArea-->
+                    <div class="container text-center mt-2" id="tsAddButton">
+                        <button onclick="addNewTSField()" class="btn btn-dark btn-small ">Add</button>
+                    </div>
+                </div>
+
+                <!-- Works  --> 
+                <div class="form-group mt-3" id="ws">
+                    <label for="">Your Works </label>
+                    <textarea placeholder="Enter Here"class="form-control wsField" rows="3">
+                    </textarea>
+                    <!--New TextArea-->
+                    <div class="container text-center mt-2" id="wsAddButton">
+                        <button onclick="addNewWSField()" class="btn btn-dark btn-small ">Add</button>
+                    </div>
+                </div>
+
+                <!-- Language Proficiency  --> 
+                <div class="form-group mt-3" id="lp">
+                    <label for="">Language Proficiency </label>
+                    <textarea placeholder="Enter Here"class="form-control lpField" rows="3">
+                    </textarea>
+                    <!--New TextArea-->
+                    <div class="container text-center mt-2" id="lpAddButton">
+                        <button onclick="addNewLPField()" class="btn btn-dark btn-small ">Add</button>
+                    </div>
+                </div>
+
+        <!-- reference -->
+                <div class="form-group mt-3">
+                    <label for="ref1Field"> First Reference </label>
+                    <textarea type="text" id="ref1Field" placeholder="Enter here"class="form-control" rows="3">
+                    </textarea>
+
+                 </div>
+
+                 <div class="form-group mt-3">
+                    <label for="ref2Field"> Second Reference </label>
+                    <textarea type="text" id="ref2Field" placeholder="Enter here"class="form-control" rows="3">
+                    </textarea>
+                 </div>
+        <!-- references done -->
+                 
+            </div>
+        </div>
+     
+        <div class="container text-center mt-3 mb-5">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>       
+        </div>
+
+    </div>
+
+
+
+    <!-- cv template -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="container-fluid py-5 ">
+                <!-- first column -->
+               <div class="container text-end">
+                <img src="assets/img/M. Alif Ur Rahman.jpg" alt="" class="img-fluid myimg" id="tempImage">
+               </div>
+                
+
+                <div class="container">
+                    <h3 id="t1Name" style="text-transform: uppercase; color:midnightblue; font-weight: bold;">M. Alif Ur Rahman</h3>
+                    <p id="tAddress">kawlar molla bari, Dakshinkhan, Dhaka</p>
+                    <p id="tContact">01744677768</p>
+                    <p><a id="tFB" href="#" style="text-decoration: none; color: black;">alifrahman363@gmail.com</a></p>
+                    <p><a id="tInsta" href="#" style="text-decoration: none; color: black;">github.com/alifrahman363</a></p>
+                    <hr>
+                    <hr>        
+                </div>
+
+                <!-- objective cards -->
+                    <div class="card mt-4">
+                        <div class="card-header bcground">
+                            <h4><u>Career Objective:</u></h4>
+                        </div>
+                        <div id="tObjective" class="card-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus</p>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Academic qualification -->
+                    <div class="card mt-4">
+                        <div class="acd-header bcground">
+                            <h4> <u>Academic Qualifications:</u> </h4>
+                        </div>
+                        <div class="acd-body">
+                            <ul id="tAq">
+                                <li><p>Lorem ipsum dolordolorem itaque aliquam!</p></li>
+                            </ul>   
+                        </div>
+                    </div>
+
+
+                    <!-- Achievements from work experience -->
+                    <div class="card mt-4">
+                        <div class="exp-header bcground">
+                            <h4> <u>Achievements:</u> </h4>
+                        </div>
+                        <div class="exp-body">
+                            <ul id="tWe">
+                                <li><p>Lorem ipsum dolor sit amet corporis dolorem itaque aliquam!</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Basic Computer Skill -->
+                    <div class="card mt-4">
+                        <div class="bcs-header bcground">
+                            <h4> <u>Basic Computer Skill:</u> </h4>
+                        </div>
+                        <div class="bcs-body">
+                            <ul id="tBcs">
+                                <li><p>Lorem ipsum dolor sit amet corporis dolorem itaque aliquam!</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Professional Development -->
+                    <div class="card mt-4">
+                        <div class="pd-header bcground">
+                            <h4> <u>Professional Development:</u> </h4>
+                        </div>
+                        <div class="pd-body">
+                            <ul id="tPd">
+                                <li><p>Lorem ipsum dolor sit amet corporis dolorem itaque aliquam!</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Technical Skills -->
+                      <div class="card mt-4">
+                        <div class="ts-header bcground">
+                            <h4> <u>Technical (IT) Skills:</u> </h4>
+                        </div>
+                        <div class="ts-body">
+                            <ul id="tTs">
+                                <li><p>Lorem ipsum dolor sit amet corporis dolorem itaque aliquam!</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Works -->
+                    <div class="card mt-4">
+                        <div class="ws-header bcground">
+                            <h4> <u>Work(s): </u> </h4>
+                        </div>
+                        <div class="ws-body">
+                            <ul id="tWs">
+                                <li><p>Lorem ipsum dolor sit amet corporis dolorem itaque aliquam!</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Language Proficiency -->
+                    <div class="card mt-4">
+                        <div class="lp-header bcground">
+                            <h4> <u>Language Proficiency: </u> </h4>
+                        </div>
+                        <div class="lp-body">
+                            <ul id="tLp">
+                                <li><p>Lorem ipsum dolor sit amet corporis dolorem itaque aliquam!</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- References -->
+                    <div class="card mt-4">
+                        <div class="card-header bcground">
+                            <h4><u>References:</u></h4>
+                        </div>
+                        <div class="row">
+                            <div id="tObjective" class="col-md-6 text-center card-body">
+                                <p id="tRef1">01744677768</p> 
+                            </div>
+                            <div id="tObjective" class="col-md-6 text-center card-body">
+                                <p id="tRef2">01744677768</p> 
+                            </div>
+                        </div>
+                    </div>
+
+
+        
+                    <!-- Personal Informations -->
+                    <div class="Personal mt-4">
+                        <div class="personal-header bcground">
+                            <h4> <u> Personal Informations:</u> </h4>
+                        </div>
+                        <div class="personal-body">
+                            <p id="tFatherField">M. Mizanur Rahmana</p>
+                            <p id="tMotherField">Shahnaj Khatun</p>
+                            <p id="tPAddressField">5, Laldighi West, Jashore</p>
+                            <p id="tReligionField">Islam</p>
+                            <p id="tRltnField">Single</p>
+                            <p id="tNationField">Bangladeshi</p>
+                        </div>
+                    </div>
+
+                    <div class="container mt-3 text-center">
+                        <button onclick="printCV()" class="btn bcground">Print CV</button>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
